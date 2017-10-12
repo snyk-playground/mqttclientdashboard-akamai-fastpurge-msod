@@ -1,6 +1,6 @@
 # Sample app for Akamai DevOps features
 ## Node JS sample app for Akamai Fast purge and Media Service On Demand Content Preparation transcoding callback endpoint
-<!-- <img src="https://snyk.io/test/github/aarlaud/nsuploaderelectrones6/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/aarlaud/nsuploaderelectrones6" style="max-width:100%;"/> -->
+<img src="https://snyk.io/test/github/aarlaud/mqttclientdashboard-akamai-fastpurge-msod/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/aarlaud/mqttclientdashboard-akamai-fastpurge-msod" style="max-width:100%;"/>
 
 
 Node JS running on Raspberry Pi to demonstrate the following features:
