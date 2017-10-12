@@ -1,0 +1,5 @@
+[ccu]
+client_secret = <secret>
+host = <host>
+access_token = <access_token>
+client_token = <client_token>

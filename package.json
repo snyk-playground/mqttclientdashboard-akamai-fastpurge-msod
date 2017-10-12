@@ -1,0 +1,20 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "MQTT Client Dashboard for Akamai features demo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mqtt"
+  ],
+  "author": "Antoine Arlaud (aarlaud@github)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "edgegrid": "^3.0.2",
+    "express": "^4.15.3",
+    "mosca": "^2.5.2"
+  }
+}
