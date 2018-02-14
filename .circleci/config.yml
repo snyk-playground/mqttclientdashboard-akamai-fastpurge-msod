@@ -1,0 +1,48 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      #- image: circleci/node:8.0
+      - image: snyk/snyk-cli:npm
+
+    steps:
+      # Install snyk CLI
+      # - run:
+      #     name: update-snyk
+      #     command: 'sudo npm install -g snyk'
+
+      - run:
+          name: install-jq
+          command: 'apt-get install jq'
+
+      - checkout
+
+      # Install goof dependencies
+      - run:
+          name: build-goof
+          command: 'npm install'
+
+      # Snyk Test
+      - run:
+          name: "Snyk Test breaking on high sev"
+          command:
+            snyk test --json | jq -e '[(.vulnerabilities[].severity == "high")]' | jq 'if(any) then error("high severity vuln(s) found !") else empty end'
+
+      # Snyk Monitor if snyk test passes (snyk test by default fails if any vulnerabilities are detected)
+      - run:
+          name: "Snyk Monitor"
+          command:
+            snyk monitor --org=snyk-playground
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          context: SNYK
+
