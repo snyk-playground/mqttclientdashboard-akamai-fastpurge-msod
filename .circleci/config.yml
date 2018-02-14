@@ -7,14 +7,14 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      #- image: circleci/node:8.0
-      - image: snyk/snyk-cli:npm
+      - image: circleci/node:8.0
+#      - image: snyk/snyk-cli:npm
 
     steps:
       # Install snyk CLI
-      # - run:
-      #     name: update-snyk
-      #     command: 'sudo npm install -g snyk'
+       - run:
+           name: update-snyk
+           command: 'sudo npm install -g snyk'
 
       - run:
           name: install-jq
