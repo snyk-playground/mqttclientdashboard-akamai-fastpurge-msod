@@ -4,7 +4,9 @@
   "description": "MQTT Client Dashboard for Akamai features demo",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "mqtt"
@@ -15,6 +17,8 @@
     "body-parser": "^1.17.2",
     "edgegrid": "^3.0.2",
     "express": "^4.15.3",
-    "mosca": "^2.5.2"
-  }
+    "mosca": "^2.5.2",
+    "snyk": "^1.88.0"
+  },
+  "snyk": true
 }
