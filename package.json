@@ -13,8 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "edgegrid": "^3.0.2",
-    "express": "^4.15.3",
+    "edgegrid": "^3.0.3",
+    "express": "^4.15.5",
     "mosca": "^2.5.2"
   }
 }
