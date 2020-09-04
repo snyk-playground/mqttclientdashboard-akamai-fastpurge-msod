@@ -15,6 +15,6 @@
     "body-parser": "^1.17.2",
     "edgegrid": "^3.0.2",
     "express": "^4.15.3",
-    "mosca": "^2.5.2"
+    "mosca": "^2.6.0"
   }
 }
